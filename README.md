@@ -1,11 +1,11 @@
-![Prognostics - Predictor Selection](https://github.com/marcialbaptista/XAIPrognosticsSHAP/blob/master/imgs/icon.png?raw=true)
+![Prognostics - Predictor Selection](https://github.com/marcialbaptista/SHAPPrognosticsFeatureSelection/blob/master/imgs/icon.png?raw=true)
 
 ##Prognostics Metrics and Local Interpretability SHAP Values
 
 To be capable of understanding the reasons behind the decision of a complex decision-making system is a topic of interest in many fields of study, especially those in which accountability and responsibility are crucial aspects. Maintenance decisions in domains such as aeronautics are becoming increasingly dependent on advanced and complex prognostics models. However, these models need to be better understood and more transparent. To help address this issue, we use the SHAP model (SHapley Additive exPlanations) from the field of eXplainable Artificial Intelligence (XAI) to analyze the outcome of three increasingly complex algorithms: Linear Regression, Multi-Layer Perceptron and Echo State Network. Our goal is to correlate the popular prognostics metrics of monotonicity, trendability and prognosability with the explanations of the SHAP model, i.e., the SHAP values. Our results on the C-MAPSS engine data suggest that SHAP values exhibit monotonic, trendable and prognosable trends. 
 
 <p float="center">
-  <img src="imgs/SHAP.png" width="33%">
+  <img src="imgs/SHAP.png">
 </p>
 
 This repository provides code to compute the monotonicity, trendability and prognosability of the predictors in C-MAPSS dataset 1 and the monotonicity,trendability and prognosability of their SHAP values
