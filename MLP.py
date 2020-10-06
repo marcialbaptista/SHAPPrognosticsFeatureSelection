@@ -431,7 +431,7 @@ class ShapExplainerModel:
                 plt.ylabel('SHAP values')
                 plt.xlabel('Time (cycles)')
                 plt.tight_layout()
-                plt.savefig("/Users/marciabaptista/Dropbox/Engineering applications of artificial intelligence/figs/ShapValuesOverTime/" + self.sensor_names[i] + "_1_MLP.png")
+                plt.savefig("/Users/marciabaptista/Dropbox/Engineering applications of artificial intelligence/figs/ShapValuesOverTime/" + self.sensor_names[i] + "_2_MLP.png")
                 plt.close()
                 #plt.show()
 
@@ -580,7 +580,7 @@ debug_baselined_sensors = False
 debug_denoised_sensors = False
 debug_esn_sensors = False
 debug_shap_values_RUL = False
-dataset_csv_name = '../data/train_FD001.txt'
+dataset_csv_name = './data/train_FD001.txt'
 new_shap_run = True
 results_csv_filename = 'results_shap/FD001_01'
 

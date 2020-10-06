@@ -462,13 +462,13 @@ class ShapExplainerModel:
             for unit in np.unique(self.testing_units)[:3]:
                 RULs = np.array(self.testing_RULs)[self.testing_units == unit][::-1]*400
                 #plt.plot(RULs, dataframe.loc[dataframe['Unit'] == unit, self.sensor_names[i] + 'denoised'].values, label='signal')
-                plt.scatter(RULs, np.array(self.shap_values[:, i])[self.testing_units == unit], label='SHAP value', c='black')
+                plt.scatter(RULs, np.array(self.shap_values[:, i])[self.testing_units == unit], c='black')
                 #plt.title(self.sensor_names[i])
-                plt.legend()
+                #plt.legend()
                 plt.ylabel('SHAP values')
                 plt.xlabel('Time (cycles)')
                 plt.tight_layout()
-                plt.savefig("/Users/marciabaptista/Dropbox/Engineering applications of artificial intelligence/figs/ShapValuesOverTime/" + self.sensor_names[i] + "_1_ESN.png")
+                plt.savefig("/Users/marciabaptista/Dropbox/Engineering applications of artificial intelligence/figs/ShapValuesOverTime/" + self.sensor_names[i] + "_2_ESN.png")
                 plt.close()
                 #plt.show()
 
@@ -613,7 +613,7 @@ debug_baselined_sensors = False
 debug_denoised_sensors = False
 debug_esn_sensors = False
 debug_shap_values_RUL = False
-dataset_csv_name = '/data/train_FD001.txt'
+dataset_csv_name = "./data/train_FD001.txt"
 new_shap_run = True
 results_csv_filename = 'results_shap/FD001_01'
 
@@ -691,7 +691,7 @@ if new_shap_run:
     shap_model.init_data(testing_units, model.predicted_RULs, testing_RULs,data_obj)
     shap_model.run(X_train=X_train, nsamples=1000)
     shap_model.check_quality_shap_values()
-    shap_model.serialize(results_csv_filename)
+    #shap_model.serialize(results_csv_filename)
 else:
     shap_model.deserialize(results_csv_filename, sensor_names, data_obj)
 
